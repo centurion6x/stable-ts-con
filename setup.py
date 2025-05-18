@@ -22,8 +22,6 @@ setup(
     url="https://github.com/Anoncheg1/stable-ts-con",
     license="MIT",
     packages=['stable_whisper'],
-    install_requires=[
-      "whisper @ git+https://github.com/openai/whisper.git"
-    ],
+    install_requires=["openai-whisper @ git+https://github.com/openai/whisper.git"],
     include_package_data=False
 )

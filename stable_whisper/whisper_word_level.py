@@ -175,7 +175,10 @@ def transcribe_word_level(
     if 'max_initial_timestamp' not in decode_options:
         decode_options['max_initial_timestamp'] = None
 
-    mel = log_mel_spectrogram(audio)
+    # mel = log_mel_spectrogram(audio)
+    mel = log_mel_spectrogram(
+        audio,
+        n_mels=model.dims.n_mels).to(model.device)
 
     if decode_options.get("language", None) is None:
         if verbose:
